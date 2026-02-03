@@ -110,3 +110,85 @@ Output
 1
 5
 3
+
+Set Data Type
+In Python Data Types, Set is an unordered collection of data types that is iterable, mutable, and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements.
+
+Create a Set in Python
+Sets can be created by using the built-in set() function with an iterable object or a sequence by placing the sequence inside curly braces, separated by a ‘comma’. The type of elements in a set need not be the same, various mixed-up data type values can also be passed to the set.
+
+
+
+
+# initializing empty set
+s1 = set()
+​
+s1 = set("GeeksForGeeks")
+print("Set with the use of String: ", s1)
+​
+s2 = set(["Geeks", "For", "Geeks"])
+print("Set with the use of List: ", s2)
+
+Output
+Set with the use of String:  {'s', 'o', 'F', 'G', 'e', 'k', 'r'}
+Set with the use of List:  {'Geeks', 'For'}
+Access Set Items
+Set items cannot be accessed by referring to an index, since sets are unordered the items have no index. But we can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the keyword in.
+
+
+
+
+set1 = set(["Geeks", "For", "Geeks"]) #Duplicates are removed automatically
+print(set1) 
+​
+# loop through set
+for i in set1:
+   print(i, end=" ") #prints elements one by one
+  
+# check if item exist in set   
+print("Geeks" in set1)
+
+Output
+{'For', 'Geeks'}
+For Geeks True
+5. Dictionary Data Type
+A dictionary in Python is a collection of data values, used to store data values like a map, unlike other Python Data Types, a Dictionary holds a key: value pair. Key-value is provided in dictionary to make it more optimized. Each key-value pair in a Dictionary is separated by a colon : , whereas each key is separated by a ‘comma’.
+
+Create a Dictionary in Python
+Values in a dictionary can be of any datatype and can be duplicated, whereas keys can’t be repeated and must be immutable. The dictionary can also be created by the built-in function dict().
+
+Note  - Dictionary keys are case sensitive, the same name but different cases of Key will be treated distinctly. 
+
+
+
+
+# initialize empty dictionary
+d = {}
+​
+d = {1: 'Geeks', 2: 'For', 3: 'Geeks'}
+print(d)
+​
+# creating dictionary using dict() constructor
+d1 = dict({1: 'Geeks', 2: 'For', 3: 'Geeks'})
+print(d1)
+
+Output
+{1: 'Geeks', 2: 'For', 3: 'Geeks'}
+{1: 'Geeks', 2: 'For', 3: 'Geeks'}
+Accessing Key-value in Dictionary
+In order to access items of a dictionary refer to its key name. Key can be used inside square brackets. Using get() method we can access dictionary elements.
+
+
+
+
+d = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+​
+# Accessing an element using key
+print(d['name'])
+​
+# Accessing a element using get
+print(d.get(3))
+
+Output
+For
+Geeks
